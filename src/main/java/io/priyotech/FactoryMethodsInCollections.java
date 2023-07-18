@@ -29,10 +29,13 @@ public class FactoryMethodsInCollections {
 
         unModifiableListAsList();
         //List.of()->static factory method.
+        /**duplicate elements and null values are not allowed*/
         List<String> immutableList = List.of("dav", "ogyh", "uan");
         List<String> immutableList2 = List.of("g", "a", "z", "u", "q", "i", "l", "b", "j", "c");
         List<String> immutableList3 = List.of("g", "a", "z", "u", "q", "i", "l", "b", "j", "c", "d");
-        Set<String> immutableSet = Set.of("a", "k", "z", "u", "v", "i", "w", "b", "j", "c");
+
+        /**duplicate elements and null values are not allowed*/
+        Set<String> immutableSet = Set.of("a", "k", "z", "u", "v", "i", "w", "b", "j", "s");
         Map<String, Integer> immutableMap =
                 Map.ofEntries(
                         Map.entry("a", 100),
