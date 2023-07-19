@@ -1,4 +1,4 @@
-package io.priyotech;
+package io.priyotech.github;
 
 public class CompactStrings {
     public static void main(String[] args) {
