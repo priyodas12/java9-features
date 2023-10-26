@@ -7,8 +7,11 @@ import java.util.List;
 /**of() will return actual immutable methods*/
 public class DifferenceInStaticMethods {
     public static void main(String[] args) {
+        /**Java-8 Approach*/
         List<String> sampleList=Arrays.asList("a","b","c",null);
         List<String> unModifiableList1= Collections.unmodifiableList(sampleList);
+
+        /**Java-9 Enhancement*/
         List<String> unModifiableList2=List.of("a","b","c");/**cannot add null here*/
         System.out.println(unModifiableList1);//[a, b, c]
         System.out.println(unModifiableList2);
