@@ -26,5 +26,13 @@ public class DifferenceInStaticMethods {
         Set<String> unmodifiableSet=Collections.unmodifiableSet(strSet);
         System.out.printf("unmodifiableSet : %s",unmodifiableSet);
 
+        /**Java-9 in Set*/
+        //null not allowed,NullPointerException: Cannot invoke "Object.hashCode()" because "pe" is null
+        Set<String> unmodifiableSet2=Set.of("12","13","14","18");
+        System.out.printf("unmodifiableSet2 : %s",unmodifiableSet2);
+
+        Set<String> unmodifiableSet3=Set.of("12","13","14","12");//IllegalArgumentException: duplicate element: 12
+        System.out.printf("unmodifiableSet3 : %s",unmodifiableSet3);
+
     }
 }
