@@ -1,0 +1,23 @@
+Onwards java9 G1 will be default garbage collector.
+
+Low latency(The period of time during which the garbage collector is active)
+
+High throughput(Throughput is the percentage of total time not spent in garbage collection,
+considered over long periods of time) garbage Collectors.
+
+pause target of 200ms.(this time indicates garbage collectors stops
+the application and recovers space that is no longer used)
+
+G1 Garbage collector splits heap area into regions(roughly number of 2048)
+region size 1-32MB.
+
+if its 4GB heap size=4*1024MB=2MB of region size.
+if its 8GB heap size=8*1024MB=4MB of region size.
+
+regions are tagged as Eden,Survivor,Old & Humongous(any object size is half of the region)
+
+new object allocated to Eden regions.
+
+concurrent mark operation while java application will not stop.
+
+
