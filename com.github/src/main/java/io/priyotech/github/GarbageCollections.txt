@@ -1,6 +1,0 @@
-Garbage First(G1):
-default GC from Java 9.
-Heap is split into multiple region. Roughly 2048.Each block size 1-32MB.
-Eden,Survivor, Old and Humongous.
-low latency and high throughput.
-pause time=200ms
