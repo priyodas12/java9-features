@@ -1,3 +1,25 @@
+jar-hell:
+--------
+JAR hell is a class loading problem where the wrong version of a class is loaded
+into the JVM,because the same class exists in multiple JAR files given in the classpath.
+
+Case 1 :
+When deploying an application with two JAR files, one JAR file for each version of the same class files,
+are listed in the classpath, and the older version is listed first. The System ClassLoader will load
+the older version of the class into JVM. This is a deployment mistake which can be easily corrected.
+
+Case 2 :
+When deploying an application with one JAR file and one class folder, one for each version of
+the same class files, are listed in the classpath, and the older version is listed first.
+The System ClassLoader will load the older version of the class into JVM.
+This is a deployment mistake which can be easily corrected.
+
+Case 3 :
+An application requires two libraries, which require different versions,
+two JAR files, of a single third library. If both versions of the third library use same class names,
+there is no way to load both JAR files of the third library with the same ClassLoader.
+
+
 module=code+data
 code-Packages(Classes+Interfaces+Enums)
 Data-Resources
